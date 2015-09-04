@@ -17,12 +17,12 @@ public class ImportedTaxableItem implements TaxableItem {
 
     @Override
     public double maturedPrice() {
-        return roundOff(0.15 * quantity * price);
+        return roundOff(price + 0.15 * quantity * price);
     }
 
     @Override
     public void display() {
-
+        System.out.println(quantity + " " + itemName + ": " + maturedPrice());
     }
 
     private double roundOff(double value) {

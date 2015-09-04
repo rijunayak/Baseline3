@@ -1,8 +1,6 @@
 //An Unimported Taxable Item has a price, matured price and displays itself
 package com.thoughtworks.baseline3;
 
-import org.junit.Test;
-
 import static java.lang.Math.ceil;
 
 public class UnimportedTaxableItem implements TaxableItem {
@@ -11,7 +9,7 @@ public class UnimportedTaxableItem implements TaxableItem {
     private double price;
     private String itemName;
 
-    public UnimportedTaxableItem(double price) {
+    public UnimportedTaxableItem(double price, int quantity, String itemName) {
         this.quantity = quantity;
         this.price = price;
         this.itemName = itemName;
@@ -19,12 +17,12 @@ public class UnimportedTaxableItem implements TaxableItem {
 
     @Override
     public double maturedPrice() {
-        return roundOff(0.1 * quantity * price);
+        return roundOff(price + 0.1 * quantity * price);
     }
 
     @Override
     public void display() {
-
+        System.out.println(quantity + " " + itemName + ": " + maturedPrice());
     }
 
     private double roundOff(double value) {

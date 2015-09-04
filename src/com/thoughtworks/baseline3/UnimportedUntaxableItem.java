@@ -7,7 +7,7 @@ public class UnimportedUntaxableItem implements TaxableItem {
     private double price;
     private String itemName;
 
-    public UnimportedUntaxableItem(double price) {
+    public UnimportedUntaxableItem(double price, int quantity, String itemName) {
         this.quantity = quantity;
         this.price = price;
         this.itemName = itemName;
@@ -16,11 +16,11 @@ public class UnimportedUntaxableItem implements TaxableItem {
 
     @Override
     public double maturedPrice() {
-        return 0;
+        return price;
     }
 
     @Override
     public void display() {
-
+        System.out.println(quantity + " " + itemName + ": " + maturedPrice());
     }
 }
