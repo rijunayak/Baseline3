@@ -1,5 +1,7 @@
 package com.thoughtworks.baseline3;
 
+import static java.lang.Math.ceil;
+
 public class UnimportedUntaxableItem implements TaxableItem {
 
     private double price;

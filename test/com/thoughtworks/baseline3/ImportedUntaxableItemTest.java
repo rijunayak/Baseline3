@@ -12,4 +12,11 @@ public class ImportedUntaxableItemTest {
 
         assertEquals(0.0, importedUntaxableItem.calculateTotalTax(), 0.0);
     }
+
+    @Test
+    public void shouldRightlyReturnRoundedOffTaxOnImportedUntaxableItem() {
+        ImportedUntaxableItem importedUntaxableItem = new ImportedUntaxableItem(13.56);
+
+        assertEquals(0.7, importedUntaxableItem.calculateTotalTax(), 0.0);
+    }
 }
