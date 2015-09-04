@@ -2,7 +2,7 @@
 <project name="Baseline3" default="runjUnit" basedir=".">
 
     <property name = "project.name" value="Baseline3" />
-    <property name = "main.name" value="Demo" />
+    <property name = "main.name" value="TaxApp" />
     <property name = "package.name" value="com.thoughtworks.baseline3" />
 
     <target name="build" depends="clean">
