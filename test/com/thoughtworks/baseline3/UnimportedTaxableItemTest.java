@@ -7,16 +7,16 @@ import static org.junit.Assert.assertEquals;
 public class UnimportedTaxableItemTest {
 
     @Test
-    public void shouldReturnZeroTaxOnAZeroPricedUnimportedTaxableItem() {
+    public void shouldReturnSameMaturedPriceOnAZeroPricedUnimportedTaxableItem() {
         UnimportedTaxableItem unimportedTaxableItem = new UnimportedTaxableItem(0.0);
 
-        assertEquals(0.0, unimportedTaxableItem.totalTax(),0.0);
+        assertEquals(0.0, unimportedTaxableItem.maturedPrice(),0.0);
     }
 
     @Test
-    public void shouldRightlyReturnRoundedTaxForUnimportedTaxableItem() {
+    public void shouldRightlyReturnRoundedMaturedPriceForUnimportedTaxableItem() {
         UnimportedTaxableItem unimportedTaxableItem = new UnimportedTaxableItem(13.46);
 
-        assertEquals(1.35, unimportedTaxableItem.totalTax(), 0.0);
+        assertEquals(1.35, unimportedTaxableItem.maturedPrice(), 0.0);
     }
 }
