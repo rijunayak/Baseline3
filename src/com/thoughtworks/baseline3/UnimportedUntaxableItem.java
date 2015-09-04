@@ -1,6 +1,5 @@
+//An UnimportedUntaxable Item has a price and a tax
 package com.thoughtworks.baseline3;
-
-import static java.lang.Math.ceil;
 
 public class UnimportedUntaxableItem implements TaxableItem {
 
@@ -12,7 +11,7 @@ public class UnimportedUntaxableItem implements TaxableItem {
 
 
     @Override
-    public double calculateTotalTax() {
+    public double totalTax() {
         return 0;
     }
 }

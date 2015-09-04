@@ -10,6 +10,6 @@ public class UnimportedUntaxableItemTest {
     public void UnimportedUntaxableItemShouldAlwaysHaveZeroTax() {
         UnimportedUntaxableItem unimportedUntaxableItem = new UnimportedUntaxableItem(6.0);
 
-        assertEquals(0.0, unimportedUntaxableItem.calculateTotalTax(), 0.0);
+        assertEquals(0.0, unimportedUntaxableItem.totalTax(), 0.0);
     }
 }
