@@ -12,4 +12,11 @@ public class UnimportedTaxableItemTest {
 
         assertEquals(0.0, unimportedTaxableItem.totalTax(),0.0);
     }
+
+    @Test
+    public void shouldRightlyReturnRoundedTaxForUnimportedTaxableItem() {
+        UnimportedTaxableItem unimportedTaxableItem = new UnimportedTaxableItem(13.46);
+
+        assertEquals(1.35, unimportedTaxableItem.totalTax(), 0.0);
+    }
 }

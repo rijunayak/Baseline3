@@ -15,7 +15,7 @@ public class UnimportedTaxableItem implements TaxableItem {
 
     @Override
     public double totalTax() {
-        return roundOff(0);
+        return roundOff(0.1 * price);
     }
 
     private double roundOff(double value) {
