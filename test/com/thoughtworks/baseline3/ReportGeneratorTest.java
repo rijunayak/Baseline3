@@ -13,4 +13,11 @@ public class ReportGeneratorTest {
 
         assertFalse(reportGenerator.parseInput("gray box of chocolates at 5.0"));
     }
+
+    @Test
+    public void lastTokenMustBeDouble() {
+        ReportGenerator reportGenerator = new ReportGenerator();
+
+        assertFalse(reportGenerator.parseInput("1 box of chocolates at free"));
+    }
 }

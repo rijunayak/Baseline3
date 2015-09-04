@@ -15,14 +15,26 @@ public class ReportGenerator {
         if(!isInteger(tokenizedCommands[0]))
             return false;
         quantity = Integer.parseInt(tokenizedCommands[0]);
-        StringBuilder itemName;
         double price;
+        if(!isInteger(tokenizedCommands[tokenizedCommands.length - 1]))
+            return false;
+        price = Double.parseDouble(tokenizedCommands[tokenizedCommands.length - 1]);
+        StringBuilder itemName;
         return true;
     }
 
     private boolean isInteger(String value) {
         try {
             Integer.parseInt(value);
+        } catch(NumberFormatException e) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isDouble(String value) {
+        try {
+            Double.parseDouble(value);
         } catch(NumberFormatException e) {
             return false;
         }
