@@ -13,7 +13,7 @@ public class ImportedTaxableItem implements TaxableItem {
 
     @Override
     public double totalTax() {
-        return roundOff(0);
+        return roundOff(0.15 * price);
     }
 
     private double roundOff(double value) {
